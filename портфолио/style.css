@@ -7,7 +7,7 @@
     --grey: #303841;
 }
 
-*, body, html {
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -20,7 +20,7 @@ body {
 
 /*NAVIGARION*/
 nav {
-    width: 100%;
+   width: 100%;
     background-color: var(--red);
     position: fixed;
 
@@ -50,8 +50,9 @@ li:hover {
 }
 
 /*ABOUT*/
+
 .about {
-    background: var(--grey);
+    background-color: var(--grey);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -96,13 +97,13 @@ h2 {
 .line {
     width: 600px;
     border-bottom: 2px solid var(--white);
+    margin-bottom: 20px;
    }
 
 /*project samples*/
 
 .projects{
-    background-color: red;
-    width: 1200px;
+    width: 900px;
     align-items: center;
     display: grid;
     column-gap: 20px;
@@ -111,11 +112,18 @@ h2 {
     margin: 0 auto;
 }
 
+
 img{
 display: block;
 width: 100%;
 }
 
+.projects p{
+    background-color: var(--grey);
+}
+.projects a{
+    padding: 20px 5px;
+}
 
 @media screen and (max-width: 700px) {
     ul {
