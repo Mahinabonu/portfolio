@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+    --white: #f0f0f0;
+    --red: #be3144;
+    --blue: #45567d;
+    --grey: #303841;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "oswald", sans-serif;
+    font-size: 1rem;
+}
+
+/*NAVIGARION*/
+nav {
+    width: 100%;
+    background-color: var(--red);
+    position: fixed;
+
+}
+
+ul, li, a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    transition: ease-in-out;
+}
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+
+li {
+    padding: 1.2rem 2rem;
+    margin: 0 .5rem;
+}
+
+li:hover {
+    background-color: var(--grey);
+}
+
+/*ABOUT*/
+
+.about {
+    background-color: var(--grey);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about h1 {
+    text-transform: capitalize;
+    color: var(--white);
+    font-weight: 700;
+    font-size: 4rem;
+
+}
+
+.about p {
+    font-size: 2.5rem;
+    font-weight: 100;
+    color: var(--red);
+}
+
+/*PROJECTS*/
+.blue {
+    background: var(--blue);
+    padding: 4rem 1rem;
+
+}
+
+/*underlined text*/
+.underline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    color: var(--white);
+    font-weight: 500;
+    font-size: 3rem;
+    border-spacing: 15px;
+    text-align: center;
+}
+
+.line {
+    width: 600px;
+    border-bottom: 2px solid var(--white);
+    margin-bottom: 30px;
+}
+
+/*project samples*/
+
+.projects {
+    max-width: 1280px;
+    align-items: center;
+    display: grid;
+    column-gap: 4rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    margin: 0 auto;
+}
+
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.projects p {
+    text-align: center;
+    background-color: var(--grey);
+}
+
+.projects_hover {
+    margin-bottom: 4rem;
+}
+
+/*BUTTON*/
+
+.btn {
+    display: flex;
+    font-size: 1.5rem;
+    background-color: var(--grey);
+    color: var(--white);
+    padding: 0.5em 1em;
+    border: none;
+    transition: ease-in-out;
+    cursor: pointer;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.btn img {
+    display: inline-block;
+    width: .6em;
+    margin: 10px 5px 5px;
+}
+
+.btn:hover {
+    background-color: var(--red);
+}
+
+/*SOCIAL*/
+.proposal {
+    padding: 15px;
+}
+
+.text_centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+}
+
+.proposal p {
+    font-size: 1.9rem;
+}
+
+.icon {
+    width: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+.social {
+    display: inline;
+    font-size: 2.4rem;
+    justify-content: space-between;
+    text-transform: capitalize;
+}
+
+.social a {
+    display: flex;
+    margin: 5px;
+    font-size: 1.7rem;
+}
+
+.social div {
+    display: inline-block;
+    padding: 1.2rem;
+    margin: 1rem;
+    transition: .3s ease-in-out;
+}
+
+.social div:hover {
+    transform: translateY(10%);
+}
+
+.social img {
+    margin-right: 10px;
+}
+
+/*LINE*/
+.footer_line {
+    width: 100%;
+    border-bottom: 5px solid var(--red);
+}
+
+/*FOOTER*/
+
+.footer {
+    background: var(--grey);
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    color: var(--white);
+    font-size: 1.7rem;
+    padding: 3rem 0;
+}
+footer .text_centered{
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/*MEDIA*/
+@media screen and (max-width: 1170px) {
+    .projects {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    /*NAV*/
+    ul {
+        justify-content: center;
+        align-items: center;
+    }
+
+    ul, li, a {
+        font-size: 1rem;
+
+    }
+
+    /*CLASSES*/
+    .about {
+        height: 50vh !important;
+    }
+
+    .projects {
+        max-width: 450px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: auto 20%;
+    }
+
+    .social {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .social div {
+        margin: 0;
+    }
+
+    .proposal {
+        height: 80vh;
+    }
+
+    .line {
+        width: 100%;
+        margin: 1rem 15px 2rem;
+    }
+.text_centered{
+    padding-top: 10%;
+}
+    .footer {
+        text-align: center;
+        height: 100%;
+        flex-wrap: wrap;
+    }
+
+
+    /*BUTTON*/
+    .btn {
+        font-size: 1rem;
+        padding: 0.5em 1em;
+    }
+
+    .btn img {
+        width: 1em;
+        margin-top: .7px;
+    }
+
+    /*FONT_SIZES*/
+    .about h1 {
+        font-weight: 500;
+        font-size: 2.5rem;
+
+    }
+
+    .about p {
+        font-size: 1.8rem;
+
+    }
+
+
+}
+
+
+@media screen and (max-width: 460px) {
+    .proposal {
+        height: 100vh;
+    }
+    .text_centered{
+        padding-top: 20%;
+    }
+    .social a {
+        font-size: 1rem;
+    }
+
+    /*FONT-SIZE*/
+    .about h1, h2 {
+        font-weight: 400;
+        font-size: 1.7rem;
+
+    }
+
+    .about p, span {
+        font-size: 1rem;
+
+    }
+
+    /*BUTTON*/
+    .btn {
+        font-size: .7rem;
+        padding: 0.5em 1em;
+        /*margin-left: 50%;*/
+    }
+
+    .btn img {
+        width: .7em;
+        margin-top: .5px;
+    }
+}
