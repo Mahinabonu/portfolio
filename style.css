@@ -121,30 +121,38 @@ img {
     width: 100%;
 }
 
-.projects_hover p{
+.projects_hover p {
     text-align: center;
     background-color: var(--grey);
-     position: relative;
+    position: relative;
+    padding: 0 15px;
     margin-bottom: 4rem;
     z-index: 1;
 }
 
-.projects_hover p:hover::before, .projects_hover p:hover::after{
+.projects_hover p:hover::before, .projects_hover p:hover::after {
     color: var(--red);
     position: absolute;
     width: inherit;
     height: 100%;
 
 }
+
 .projects_hover p:hover::before {
     content: "<";
     top: 0;
-    left:0;
+    left: 10%;
+    margin-left: 5px;
+
+
 }
+
 .projects_hover p:hover::after {
     content: "/>";
-    right: 10%;
- }
+    right: auto;
+    margin-left: 5px;
+}
+
 /*BUTTON*/
 
 .btn {
@@ -231,18 +239,23 @@ img {
 
 .footer {
     background: var(--grey);
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "fake  copy";
     text-align: center;
     color: var(--white);
     font-size: 1.7rem;
     padding: 3rem 0;
 }
 
-footer .text_centered {
-    flex-direction: row;
-    justify-content: space-between;
+.fake {
+    grid-template-areas: "fake";
 }
+
+.copy {
+    grid-template-areas: "copy";
+}
+
 
 /*MEDIA*/
 @media screen and (max-width: 1170px) {
@@ -300,9 +313,11 @@ footer .text_centered {
     }
 
     .footer {
-        text-align: center;
+        font-size: 1rem;
+        display: flex;
+        flex-direction: column;
         height: 100%;
-        flex-wrap: wrap;
+
     }
 
 
