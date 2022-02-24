@@ -7,7 +7,7 @@
     --grey: #303841;
 }
 
-* {
+*, *::before, *::after {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -23,6 +23,7 @@ nav {
     width: 100%;
     background-color: var(--red);
     position: fixed;
+    z-index: 50;
 
 }
 
@@ -120,15 +121,30 @@ img {
     width: 100%;
 }
 
-.projects p {
+.projects_hover p{
     text-align: center;
     background-color: var(--grey);
-}
-
-.projects_hover {
+     position: relative;
     margin-bottom: 4rem;
+    z-index: 1;
 }
 
+.projects_hover p:hover::before, .projects_hover p:hover::after{
+    color: var(--red);
+    position: absolute;
+    width: inherit;
+    height: 100%;
+
+}
+.projects_hover p:hover::before {
+    content: "<";
+    top: 0;
+    left:0;
+}
+.projects_hover p:hover::after {
+    content: "/>";
+    right: 10%;
+ }
 /*BUTTON*/
 
 .btn {
@@ -222,7 +238,8 @@ img {
     font-size: 1.7rem;
     padding: 3rem 0;
 }
-footer .text_centered{
+
+footer .text_centered {
     flex-direction: row;
     justify-content: space-between;
 }
@@ -277,9 +294,11 @@ footer .text_centered{
         width: 100%;
         margin: 1rem 15px 2rem;
     }
-.text_centered{
-    padding-top: 10%;
-}
+
+    .text_centered {
+        padding-top: 10%;
+    }
+
     .footer {
         text-align: center;
         height: 100%;
@@ -318,9 +337,11 @@ footer .text_centered{
     .proposal {
         height: 100vh;
     }
-    .text_centered{
+
+    .text_centered {
         padding-top: 20%;
     }
+
     .social a {
         font-size: 1rem;
     }
