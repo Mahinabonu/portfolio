@@ -141,8 +141,8 @@ img {
 .projects_hover p:hover::before {
     content: "<";
     top: 0;
-    left: 10%;
-    margin-left: 5px;
+    left: auto;
+    margin-left: -10px;
 
 
 }
